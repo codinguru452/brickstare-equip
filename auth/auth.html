@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="BrickStare Equip account login, registration and password recovery."
+    />
+
+    <meta
+      name="keywords"
+      content="BrickStare, Login, Register, Rider Portal, Hardware"
+    />
+
+    <link rel="shortcut icon" href="favicon.svg" />
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tiny Slider -->
+    <link href="../css/tiny-slider.css" rel="stylesheet" />
+
+    <!-- YOUR EXISTING WEBSITE CSS -->
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <title>BrickStare Equip - Account</title>
+  </head>
+
+  <body>
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav
+      class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark"
+      aria-label="BrickStare navigation"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"> BrickStare Equip </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#authNavbar"
+          aria-controls="authNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="authNavbar">
+          <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html"> About us </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html"> Contact us </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =====================================================
+         AUTH SECTION
+         ===================================================== -->
+
+    <section class="auth-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+            <div class="auth-card">
+              <!-- =================================================
+                             LOGIN
+                             ================================================= -->
+
+              <form class="auth-form active" id="loginForm" novalidate>
+                <div class="auth-header text-center">
+                  <div class="auth-icon">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+
+                  <h1>Welcome Back</h1>
+
+                  <p>Sign in to your BrickStare Equip account to continue.</p>
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+                  <label for="loginEmail"> Email Address </label>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="loginEmail"
+                      name="email"
+                      placeholder="Enter your email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+                  <div class="auth-label-row">
+                    <label for="loginPassword"> Password </label>
+
+                    <button
+                      type="button"
+                      class="auth-link-button"
+                      data-switch="forgot"
+                    >
+                      Forgot Password?
+                    </button>
+                  </div>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                      type="password"
+                      class="form-control password-input"
+                      id="loginPassword"
+                      name="password"
+                      placeholder="Enter your password"
+                      autocomplete="current-password"
+                      required
+                    />
+
+                    <button
+                      type="button"
+                      class="password-toggle"
+                      data-password="loginPassword"
+                      aria-label="Show password"
+                    >
+                      <i class="fa-solid fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- REMEMBER ME -->
+
+                <div class="remember-me">
+                  <label>
+                    <input type="checkbox" id="rememberMe" />
+
+                    <span> Remember me </span>
+                  </label>
+                </div>
+
+                <!-- MESSAGE -->
+
+                <div
+                  class="auth-message"
+                  id="loginMessage"
+                  role="alert"
+                  aria-live="polite"
+                ></div>
+
+                <!-- SUBMIT -->
+
+                <button type="submit" class="auth-submit">
+                  <span>Sign In</span>
+                </button>
+
+                <!-- DIVIDER -->
+
+                <div class="auth-divider">
+                  <span>OR</span>
+                </div>
+
+                <!-- REGISTER -->
+
+                <div class="auth-switch text-center">
+                  <p>
+                    Don't have an account?
+
+                    <button type="button" data-switch="register">
+                      Create an account
+                    </button>
+                  </p>
+                </div>
+              </form>
+
+              <!-- =================================================
+                             REGISTRATION
+                             ================================================= -->
+
+              <form class="auth-form" id="registerForm" novalidate>
+                <div class="auth-header text-center">
+                  <div class="auth-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </div>
+
+                  <h1>Create Account</h1>
+
+                  <p>Create your BrickStare Equip account to get started.</p>
+                </div>
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+                  <label for="registerName"> Full Name </label>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="registerName"
+                      name="name"
+                      placeholder="Enter your full name"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+                  <label for="registerEmail"> Email Address </label>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="registerEmail"
+                      name="email"
+                      placeholder="Enter your email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+                  <label for="registerPhone"> Phone Number </label>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="registerPhone"
+                      name="phone"
+                      placeholder="e.g. 0712345678"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- ACCOUNT TYPE -->
+<input type="hidden" id="accountType" name="accountType" value="customer" />
+<div class="form-group"><div class="auth-message show success" style="display:block">Customer account</div></div>
+<!-- PASSWORD -->
+
+                <div class="form-group">
+                  <label for="registerPassword"> Password </label>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                      type="password"
+                      class="form-control password-input"
+                      id="registerPassword"
+                      name="password"
+                      placeholder="Create a password"
+                      autocomplete="new-password"
+                      minlength="8"
+                      required
+                    />
+
+                    <button
+                      type="button"
+                      class="password-toggle"
+                      data-password="registerPassword"
+                      aria-label="Show password"
+                    >
+                      <i class="fa-solid fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+                  <label for="confirmPassword"> Confirm Password </label>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <input
+                      type="password"
+                      class="form-control password-input"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      placeholder="Confirm your password"
+                      autocomplete="new-password"
+                      required
+                    />
+
+                    <button
+                      type="button"
+                      class="password-toggle"
+                      data-password="confirmPassword"
+                      aria-label="Show password"
+                    >
+                      <i class="fa-solid fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- TERMS -->
+
+                <div class="remember-me">
+                  <label>
+                    <input type="checkbox" id="terms" required />
+
+                    <span>
+                      I agree to the
+                      <a href="#"> Terms & Conditions </a>
+                    </span>
+                  </label>
+                </div>
+
+                <!-- MESSAGE -->
+
+                <div
+                  class="auth-message"
+                  id="registerMessage"
+                  role="alert"
+                  aria-live="polite"
+                ></div>
+
+                <!-- SUBMIT -->
+
+                <button type="submit" class="auth-submit">
+                  <span>Create Account</span>
+                </button>
+
+                <!-- SWITCH -->
+
+                <div class="auth-switch text-center">
+                  <p>
+                    Already have an account?
+
+                    <button type="button" data-switch="login">Sign in</button>
+                  </p>
+                </div>
+              </form>
+
+              <!-- =================================================
+                             FORGOT PASSWORD
+                             ================================================= -->
+
+              <form class="auth-form" id="forgotForm" novalidate>
+                <div class="auth-header text-center">
+                  <div class="auth-icon">
+                    <i class="fa-solid fa-key"></i>
+                  </div>
+
+                  <h1>Forgot Password?</h1>
+
+                  <p>
+                    Enter the email associated with your account and we'll help
+                    you reset your password.
+                  </p>
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+                  <label for="forgotEmail"> Email Address </label>
+
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="forgotEmail"
+                      name="email"
+                      placeholder="Enter your email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- MESSAGE -->
+
+                <div
+                  class="auth-message"
+                  id="forgotMessage"
+                  role="alert"
+                  aria-live="polite"
+                ></div>
+
+                <!-- SUBMIT -->
+
+                <button type="submit" class="auth-submit">
+                  <span>Send Reset Link</span>
+                </button>
+
+                <!-- BACK -->
+
+                <div class="auth-switch text-center">
+                  <p>
+                    Remember your password?
+
+                    <button type="button" data-switch="login">
+                      Back to Login
+                    </button>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="auth-footer">
+      <div class="container text-center">
+        <p>
+          &copy;
+          <span id="authYear"></span>
+          BrickStare Equip. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- Existing site JS -->
+    <script src="../js/tiny-slider.js"></script>
+
+    <!-- Authentication JS -->
+    <script src="../js/custom.js"></script>
+  </body>
+</html>

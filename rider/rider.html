@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="BrickStare Rider Portal - Manage assigned deliveries and update delivery status."/>
+    <meta name="keywords" content="BrickStare, Rider Portal, Deliveries, Delivery Dashboard"/>
+    <link rel="shortcut icon" href="../favicon.svg"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link href="../css/tiny-slider.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="rider.css" rel="stylesheet"/>
+
+
+    <title>BrickStare - Rider Dashboard</title>
+  </head>
+
+  <body>
+    <!--RIDER NAVIGATION-->
+
+    <nav class="rider-navbar">
+      <div class="rider-navbar-inner">
+        <a href="#dashboard" class="rider-brand">BrickStare</a>
+
+        <div class="rider-nav-right">
+          <div class="rider-status">
+            <span class="status-dot"></span>
+
+            <span>Online</span>
+          </div>
+
+          <div class="rider-profile">
+            <div class="rider-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="rider-profile-info">
+              <strong id="navRiderName"> Brian Mwangi </strong>
+              <small> Rider </small>
+            </div>
+          </div>
+
+         <button type="button" class="desktop-logout-button" id="desktopLogout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+    </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <!--MOBILE NAVIGATION-->
+
+    <div class="mobile-rider-menu" id="mobileRiderMenu">
+      <a href="#dashboard"><i class="fa-solid fa-chart-line"></i>Dashboard</a>
+      <a href="#deliveries"><i class="fa-solid fa-box"></i>My Deliveries</a>
+      <a href="#history"
+        ><i class="fa-solid fa-clock-rotate-left"></i> Delivery History</a
+      >
+
+      <button type="button" id="mobileLogout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+      </button>
+    </div>
+
+    <!--MAIN DASHBOARD -->
+
+    <main class="rider-dashboard">
+      <div class="container-fluid rider-container">
+        <section class="rider-page-header" id="dashboard">
+          <div>
+            <span class="rider-eyebrow"> RIDER PORTAL </span>
+
+            <h1>
+              Good morning,
+              <span id="pageRiderName"> Brian </span>
+            </h1>
+
+            <p>Here are your deliveries for today.</p>
+          </div>
+
+          <div class="rider-date">
+            <i class="fa-regular fa-calendar"></i>
+
+            <span id="currentDate"> Saturday, August 29, 2026 </span>
+          </div>
+        </section>
+
+        <!--SUMMARY CARDS -->
+
+        <section class="rider-summary">
+          <div class="summary-card">
+            <div class="summary-icon orange">
+              <i class="fa-solid fa-box"></i>
+            </div>
+
+            <div>
+              <span> Assigned </span>
+              <strong id="assignedCount"> 3 </strong>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-icon yellow">
+              <i class="fa-solid fa-person-walking-arrow-right"></i>
+            </div>
+
+            <div>
+              <span> Picked Up </span>
+
+              <strong id="pickedUpCount"> 1 </strong>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-icon green">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+              <span> Delivered </span>
+
+              <strong id="deliveredCount"> 4 </strong>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-icon dark">
+              <i class="fa-solid fa-route"></i>
+            </div>
+
+            <div>
+              <span> Today's Total </span>
+
+              <strong id="totalCount"> 8 </strong>
+            </div>
+          </div>
+        </section>
+
+        <!--ACTIVE DELIVERY-->
+
+        <section class="active-delivery-section">
+          <div class="section-heading">
+            <div>
+              <span class="rider-eyebrow"> CURRENT DELIVERY </span>
+
+              <h2>Active Delivery</h2>
+            </div>
+          </div>
+
+          <div class="active-delivery-card" id="activeDeliveryCard">
+            <div class="active-delivery-top">
+              <div>
+                <span class="delivery-label"> DELIVERY ID </span>
+
+                <strong id="activeDeliveryId"> REF-1024 </strong>
+              </div>
+
+              <span
+                class="delivery-status status-picked-up"
+                id="activeDeliveryStatus"
+              >
+                Picked Up
+              </span>
+            </div>
+
+            <div class="active-delivery-content">
+              <div class="customer-block">
+                <div class="customer-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                  <span> Customer </span>
+
+                  <strong id="activeCustomer"> James Kamau </strong>
+                </div>
+              </div>
+
+              <div class="customer-block">
+                <div class="customer-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                  <span> Phone </span>
+
+                  <strong id="activePhone"> 0712 345 678 </strong>
+                </div>
+              </div>
+
+              <div class="customer-block address-block">
+                <div class="customer-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                  <span> Delivery Address </span>
+
+                  <strong id="activeAddress"> Westlands, Nairobi </strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="active-delivery-item">
+              <div>
+                <span> Item </span>
+
+                <strong id="activeItem"> Jembe x 2 </strong>
+              </div>
+
+              <div>
+                <span> Retailer </span>
+
+                <strong id="activeRetailer"> BrickStare Hardware </strong>
+              </div>
+            </div>
+
+            <!-- STATUS PROGRESS -->
+
+            <div class="delivery-progress">
+              <div class="progress-step completed">
+                <div class="progress-circle">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <span> Assigned </span>
+              </div>
+
+              <div class="progress-line completed"></div>
+
+              <div class="progress-step current">
+                <div class="progress-circle">
+                  <i class="fa-solid fa-box"></i>
+                </div>
+
+                <span> Picked Up </span>
+              </div>
+
+              <div class="progress-line"></div>
+
+              <div class="progress-step">
+                <div class="progress-circle">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <span> Delivered </span>
+              </div>
+            </div>
+
+            <div class="package-verification-inline" id="packageVerificationPanel">
+              <strong>Package verification</strong>
+              <p>After pickup, verify the package before marking it delivered.</p>
+              <button type="button" class="rider-secondary-button" id="openVerificationButton">Verify Package</button>
+            </div>
+
+            <div class="active-delivery-actions">
+              <button
+                type="button"
+                class="rider-primary-button"
+                id="updateDeliveryButton"
+              >
+                <i class="fa-solid fa-arrows-rotate"></i>
+
+                Mark as Delivered
+              </button>
+
+              <a
+                href="#"
+                class="rider-secondary-button"
+                id="callCustomerButton"
+              >
+                <i class="fa-solid fa-phone"></i>
+
+                Call Customer
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!--MY DELIVERIES -->
+
+        <section class="deliveries-section" id="deliveries">
+          <div class="section-heading deliveries-heading">
+            <div>
+              <span class="rider-eyebrow"> ASSIGNED TO YOU </span>
+
+              <h2>My Deliveries</h2>
+            </div>
+
+            <div class="delivery-filter">
+              <button class="filter-button active" data-filter="all">
+                All
+              </button>
+
+              <button class="filter-button" data-filter="assigned">
+                Assigned
+              </button>
+
+              <button class="filter-button" data-filter="picked-up">
+                Picked Up
+              </button>
+
+              <button class="filter-button" data-filter="delivered">
+                Delivered
+              </button>
+            </div>
+          </div>
+
+          <div class="delivery-list" id="deliveryList"><p>Loading assigned deliveries...</p></div>
+        </section>
+
+        <!--DELIVERY HISTORY-->
+
+        <section class="history-section" id="history">
+          <div class="section-heading">
+            <div>
+              <span class="rider-eyebrow"> ACTIVITY </span>
+
+              <h2>Recent Delivery History</h2>
+            </div>
+
+            <button type="button" class="history-link" id="viewHistoryButton">
+              View All
+            </button>
+          </div>
+
+          <div class="history-card" id="historyList"><p>No completed deliveries yet.</p></div>
+        </section>
+      </div>
+    </main>
+
+    <!--DELIVERY DETAILS MODAL-->
+
+    <div class="rider-modal" id="deliveryModal">
+      <div class="rider-modal-overlay"></div>
+
+      <div class="rider-modal-content">
+        <button type="button" class="modal-close" id="closeDeliveryModal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <span class="rider-eyebrow"> DELIVERY DETAILS </span>
+
+        <h2 id="modalDeliveryId">REF-1025</h2>
+
+        <div class="modal-detail">
+          <span> Customer </span>
+
+          <strong id="modalCustomer"> Mary Wanjiku </strong>
+        </div>
+
+        <div class="modal-detail">
+          <span> Phone </span>
+
+          <strong id="modalPhone"> 0701 234 567 </strong>
+        </div>
+
+        <div class="modal-detail">
+          <span> Address </span>
+
+          <strong id="modalAddress"> Kilimani, Nairobi </strong>
+        </div>
+
+        <div class="modal-detail">
+          <span> Item </span>
+
+          <strong id="modalItem"> Heavy Duty Spanner x 3 </strong>
+        </div>
+
+        <div class="modal-status-area">
+          <span> Current Status </span>
+
+          <strong id="modalStatus"> Assigned </strong>
+        </div>
+
+        <button
+          type="button"
+          class="rider-primary-button modal-update-button"
+          id="modalUpdateButton"
+        >
+          Update Status
+        </button>
+      </div>
+    </div>
+
+    
+
+    <!--LOGOUT MODAL-->
+
+    <div class="rider-modal" id="logoutModal">
+      <div class="rider-modal-overlay"></div>
+
+      <div class="rider-modal-content small-modal">
+        <div class="modal-warning-icon">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h2>Log out?</h2>
+
+        <p>Are you sure you want to leave the rider portal?</p>
+
+        <div class="modal-actions">
+          <button type="button" class="modal-cancel" id="cancelLogout">
+            Cancel
+          </button>
+
+          <button type="button" class="modal-confirm" id="confirmLogout">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/tiny-slider.js"></script>
+    <script src="rider.js"></script>
+  
+<div class="verification-modal" id="verificationModal">
+  <div class="verification-card">
+    <button type="button" class="verification-close" id="closeVerification">&times;</button>
+    <h2>Verify Package</h2>
+    <p>Scan the package QR code or enter the package ID.</p>
+    <div class="camera-permission-note" id="cameraPermissionNote">
+      <strong>Camera access</strong>
+      <span>Allow BrickStare to access your camera to scan the package QR code.</span>
+    </div>
+    <div class="qr-camera" id="qrCamera" hidden>
+      <video id="qrVideo" autoplay playsinline muted></video>
+      <div class="qr-frame" aria-hidden="true"></div>
+    </div>
+    <button type="button" class="rider-primary-button" id="scanQrButton">Scan QR Code</button>
+    <div class="verification-or">OR</div>
+    <input id="packageIdInput" type="text" placeholder="Enter Package ID" />
+    <button type="button" class="rider-secondary-button" id="verifyPackageButton">Verify Package</button>
+    <p id="verificationStatus" class="verification-status">Ready to verify.</p>
+    <button type="button" class="rider-primary-button" id="markDeliveredButton" disabled>Mark as Delivered</button>
+  </div>
+</div>
+
+</body>
+</html>

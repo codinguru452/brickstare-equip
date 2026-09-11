@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/retailer",
+      "destination": "/retailer/dashboard.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/auth/auth.html"
+    },
+    {
+      "source": "/dispatcher",
+      "destination": "/dispatcher/index.html"
+    },
+    {
+      "source": "/rider",
+      "destination": "/rider/rider.html"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/index.py"
+    }
+  ]
+}
