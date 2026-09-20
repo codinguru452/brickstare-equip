@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse" id="navbarsFurni">
           <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" href="shop.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li><a class="nav-link" href="shop.html">Shop</a></li>
             <li><a class="nav-link" href="about.html">About us</a></li>
@@ -89,11 +89,13 @@
         <div class="row mb-5">
           <div class="col-md-12">
             <div class="border p-4 rounded" role="alert">
-              Returning customer? <a href="#">Click here</a> to login
+              Returning customer? <a href="/auth/auth.html">Click here</a> to login
             </div>
           </div>
         </div>
         <div class="row">
+          
+          <!-- LEFT COLUMN: Billing Details -->
           <div class="col-md-6 mb-5 mb-md-0">
             <h2 class="h3 mb-3 text-black">Billing Details</h2>
             <div class="p-3 p-lg-5 border bg-white">
@@ -103,7 +105,7 @@
                 >
                 <select id="c_country" class="form-control">
                   <option value="1">Select a country</option>
-                  <option value="2">bangladesh</option>
+                  <option value="2">Bangladesh</option>
                   <option value="3">Algeria</option>
                   <option value="4">Afghanistan</option>
                   <option value="5">Ghana</option>
@@ -118,37 +120,20 @@
                   <label for="c_fname" class="text-black"
                     >First Name <span class="text-danger">*</span></label
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_fname"
-                    name="c_fname"
-                  />
+                  <input type="text" class="form-control" id="c_fname" name="c_fname" />
                 </div>
                 <div class="col-md-6">
                   <label for="c_lname" class="text-black"
                     >Last Name <span class="text-danger">*</span></label
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_lname"
-                    name="c_lname"
-                  />
+                  <input type="text" class="form-control" id="c_lname" name="c_lname" />
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black"
-                    >Company Name
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_companyname"
-                    name="c_companyname"
-                  />
+                  <label for="c_companyname" class="text-black">Company Name</label>
+                  <input type="text" class="form-control" id="c_companyname" name="c_companyname" />
                 </div>
               </div>
 
@@ -157,46 +142,26 @@
                   <label for="c_address" class="text-black"
                     >Address <span class="text-danger">*</span></label
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_address"
-                    name="c_address"
-                    placeholder="Street address"
-                  />
+                  <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address" />
                 </div>
               </div>
 
               <div class="form-group mt-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Apartment, suite, unit etc. (optional)"
-                />
+                <input type="text" class="form-control" placeholder="Apartment, suite, unit etc. (optional)" />
               </div>
 
               <div class="form-group row">
                 <div class="col-md-6">
                   <label for="c_state_country" class="text-black"
-                    >State / Country <span class="text-danger">*</span></label
+                    >State / County <span class="text-danger">*</span></label
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_state_country"
-                    name="c_state_country"
-                  />
+                  <input type="text" class="form-control" id="c_state_country" name="c_state_country" />
                 </div>
                 <div class="col-md-6">
                   <label for="c_postal_zip" class="text-black"
-                    >Posta / Zip <span class="text-danger">*</span></label
+                    >Postal / Zip <span class="text-danger">*</span></label
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_postal_zip"
-                    name="c_postal_zip"
-                  />
+                  <input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip" />
                 </div>
               </div>
 
@@ -205,209 +170,54 @@
                   <label for="c_email_address" class="text-black"
                     >Email Address <span class="text-danger">*</span></label
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_email_address"
-                    name="c_email_address"
-                  />
+                  <input type="email" class="form-control" id="c_email_address" name="c_email_address" />
                 </div>
                 <div class="col-md-6">
                   <label for="c_phone" class="text-black"
                     >Phone <span class="text-danger">*</span></label
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="c_phone"
-                    name="c_phone"
-                    placeholder="Phone Number"
-                  />
+                  <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number" />
                 </div>
               </div>
 
               <div class="form-group">
-                <label
-                  for="c_create_account"
-                  class="text-black"
-                  data-bs-toggle="collapse"
-                  href="#create_an_account"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="create_an_account"
-                  ><input type="checkbox" value="1" id="c_create_account" />
-                  Create an account?</label
-                >
+                <label for="c_create_account" class="text-black" data-bs-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account">
+                  <input type="checkbox" value="1" id="c_create_account" /> Create an account?
+                </label>
                 <div class="collapse" id="create_an_account">
                   <div class="py-2 mb-4">
-                    <p class="mb-3">
-                      Create an account by entering the information below. If
-                      you are a returning customer please login at the top of
-                      the page.
-                    </p>
+                    <p class="mb-3">Create an account by entering the information below.</p>
                     <div class="form-group">
-                      <label for="c_account_password" class="text-black"
-                        >Account Password</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="c_account_password"
-                        name="c_account_password"
-                        placeholder=""
-                      />
+                      <label for="c_account_password" class="text-black">Account Password</label>
+                      <input type="password" class="form-control" id="c_account_password" name="c_account_password" />
                     </div>
                   </div>
                 </div>
               </div>
 
               <div class="form-group">
-                <label
-                  for="c_ship_different_address"
-                  class="text-black"
-                  data-bs-toggle="collapse"
-                  href="#ship_different_address"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="ship_different_address"
-                  ><input
-                    type="checkbox"
-                    value="1"
-                    id="c_ship_different_address"
-                  />
-                  Ship To A Different Address?</label
-                >
+                <label for="c_ship_different_address" class="text-black" data-bs-toggle="collapse" href="#ship_different_address" role="button" aria-expanded="false" aria-controls="ship_different_address">
+                  <input type="checkbox" value="1" id="c_ship_different_address" /> Ship To A Different Address?
+                </label>
                 <div class="collapse" id="ship_different_address">
                   <div class="py-2">
                     <div class="form-group">
-                      <label for="c_diff_country" class="text-black"
-                        >Country <span class="text-danger">*</span></label
-                      >
+                      <label for="c_diff_country" class="text-black">Country <span class="text-danger">*</span></label>
                       <select id="c_diff_country" class="form-control">
                         <option value="1">Select a country</option>
-                        <option value="2">bangladesh</option>
-                        <option value="3">Algeria</option>
-                        <option value="4">Afghanistan</option>
-                        <option value="5">Ghana</option>
-                        <option value="6">Albania</option>
-                        <option value="7">Bahrain</option>
-                        <option value="8">Colombia</option>
                         <option value="9">Kenya</option>
                       </select>
                     </div>
-
-                    <div class="form-group row">
-                      <div class="col-md-6">
-                        <label for="c_diff_fname" class="text-black"
-                          >First Name <span class="text-danger">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_fname"
-                          name="c_diff_fname"
-                        />
-                      </div>
-                      <div class="col-md-6">
-                        <label for="c_diff_lname" class="text-black"
-                          >Last Name <span class="text-danger">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_lname"
-                          name="c_diff_lname"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <label for="c_diff_companyname" class="text-black"
-                          >Company Name
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_companyname"
-                          name="c_diff_companyname"
-                        />
-                      </div>
-                    </div>
-
                     <div class="form-group row mb-3">
                       <div class="col-md-12">
-                        <label for="c_diff_address" class="text-black"
-                          >Address <span class="text-danger">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_address"
-                          name="c_diff_address"
-                          placeholder="Street address"
-                        />
+                        <label for="c_diff_address" class="text-black">Address <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="c_diff_address" name="c_diff_address" placeholder="Street address" />
                       </div>
                     </div>
-
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Apartment, suite, unit etc. (optional)"
-                      />
-                    </div>
-
-                    <div class="form-group row">
-                      <div class="col-md-6">
-                        <label for="c_diff_state_country" class="text-black"
-                          >State / Country
-                          <span class="text-danger">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_state_country"
-                          name="c_diff_state_country"
-                        />
-                      </div>
-                      <div class="col-md-6">
-                        <label for="c_diff_postal_zip" class="text-black"
-                          >Posta / Zip <span class="text-danger">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_postal_zip"
-                          name="c_diff_postal_zip"
-                        />
-                      </div>
-                    </div>
-
                     <div class="form-group row mb-5">
                       <div class="col-md-6">
-                        <label for="c_diff_email_address" class="text-black"
-                          >Email Address
-                          <span class="text-danger">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_email_address"
-                          name="c_diff_email_address"
-                        />
-                      </div>
-                      <div class="col-md-6">
-                        <label for="c_diff_phone" class="text-black"
-                          >Phone <span class="text-danger">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="c_diff_phone"
-                          name="c_diff_phone"
-                          placeholder="Phone Number"
-                        />
+                        <label for="c_diff_phone" class="text-black">Phone <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="c_diff_phone" name="c_diff_phone" placeholder="Phone Number" />
                       </div>
                     </div>
                   </div>
@@ -415,81 +225,90 @@
               </div>
 
               <div class="form-group">
-                <label for="c_order_notes" class="text-black"
-                  >Order Notes</label
-                >
-                <textarea
-                  name="c_order_notes"
-                  id="c_order_notes"
-                  cols="30"
-                  rows="5"
-                  class="form-control"
-                  placeholder="Write your notes here..."
-                ></textarea>
+                <label for="c_order_notes" class="text-black">Order Notes</label>
+                <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" class="form-control" placeholder="Write your notes here..."></textarea>
               </div>
             </div>
           </div>
+
+          <!-- RIGHT COLUMN: Coupon, Order Summary, Payment -->
           <div class="col-md-6">
+            <!-- 5. COUPON SECTION -->
             <div class="row mb-5">
               <div class="col-md-12">
                 <h2 class="h3 mb-3 text-black">Coupon Code</h2>
                 <div class="p-3 p-lg-5 border bg-white">
-                  <label for="c_code" class="text-black mb-3"
-                    >Enter your coupon code if you have one</label
-                  >
+                  <label for="c_code" class="text-black mb-3">Enter your coupon code if you have one</label>
                   <div class="input-group w-75 couponcode-wrap">
-                    <input
-                      type="text"
-                      class="form-control me-2"
-                      id="c_code"
-                      placeholder="Coupon Code"
-                      aria-label="Coupon Code"
-                      aria-describedby="button-addon2"
-                    />
+                    <input type="text" class="form-control me-2" id="c_code" placeholder="Try: BRICK10" aria-label="Coupon Code" />
                     <div class="input-group-append">
-                      <button
-                        class="btn btn-black btn-sm"
-                        type="button"
-                        id="button-addon2"
-                      >
-                        Apply
-                      </button>
+                      <button class="btn btn-black btn-sm" type="button" id="applyCouponBtn">Apply</button>
                     </div>
                   </div>
+                  <p id="couponMessage" class="mt-2 small fw-bold"></p>
                 </div>
               </div>
             </div>
 
+            <!-- 1, 2, 3, 4, 6. YOUR ORDER SECTION (Product, Price, Qty, Stock, Total) -->
             <div class="row mb-5">
               <div class="col-md-12">
                 <h2 class="h3 mb-3 text-black">Your Order</h2>
                 <div class="p-3 p-lg-5 border bg-white">
-                  <p class="mb-4">
-                    Review your items and enter your delivery details to place
-                    the order.
-                  </p>
-                  <table class="table site-block-order-table mb-5">
+                  <table class="table site-block-order-table mb-3">
                     <thead>
-                      <th>Product</th>
-                      <th>Total</th>
+                      <tr>
+                        <th>Product</th>
+                        <th class="text-end">Total</th>
+                      </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody id="orderItemsBody">
+                      <!-- JavaScript will inject items here -->
+                    </tbody>
                   </table>
 
+                  <!-- Order Total Breakdown -->
+                  <div class="border-top pt-3 mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="text-black">Subtotal:</span>
+                      <strong class="text-black" id="subtotalAmount">KES 0</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2 text-success">
+                      <span>Discount:</span>
+                      <strong id="discountAmount">- KES 0</strong>
+                    </div>
+                    <div class="d-flex justify-content-between border-top pt-2 mt-2">
+                      <span class="text-black h5">Total:</span>
+                      <strong class="text-black h5" id="totalAmount">KES 0</strong>
+                    </div>
+                  </div>
+
+                  <!-- 7. PAYMENT STATUS / METHOD -->
+                  <div class="mb-4">
+                    <h4 class="h5 mb-3">Payment Method</h4>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="radio" name="paymentMethod" id="payMpesa" value="M-Pesa" checked>
+                      <label class="form-check-label" for="payMpesa">M-Pesa</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="radio" name="paymentMethod" id="payCard" value="Credit/Debit Card">
+                      <label class="form-check-label" for="payCard">Credit / Debit Card</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="paymentMethod" id="payCod" value="Cash on Delivery">
+                      <label class="form-check-label" for="payCod">Cash on Delivery</label>
+                    </div>
+                  </div>
+
                   <div class="form-group">
-                    <button
-                      id="placeOrderBtn"
-                      class="btn btn-black btn-lg py-3 btn-block"
-                    >
-                      Place Order
-                    </button>
+                    <button id="placeOrderBtn" class="btn btn-black btn-lg py-3 btn-block">Place Order</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-        <!-- </form> -->
       </div>
     </div>
 
@@ -504,33 +323,18 @@
           <div class="col-lg-8">
             <div class="subscription-form">
               <h3 class="d-flex align-items-center">
-                <span class="me-1"
-                  ><img
-                    src="images/envelope-outline.svg"
-                    alt="Image"
-                    class="img-fluid" /></span
-                ><span>Subscribe to Newsletter</span>
+                <span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid" /></span>
+                <span>Subscribe to Newsletter</span>
               </h3>
-
               <form action="#" class="row g-3">
                 <div class="col-auto">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Enter your name"
-                  />
+                  <input type="text" class="form-control" placeholder="Enter your name" />
                 </div>
                 <div class="col-auto">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Enter your email"
-                  />
+                  <input type="email" class="form-control" placeholder="Enter your email" />
                 </div>
                 <div class="col-auto">
-                  <button class="btn btn-primary">
-                    <span class="fa fa-paper-plane"></span>
-                  </button>
+                  <button class="btn btn-primary"><span class="fa fa-paper-plane"></span></button>
                 </div>
               </form>
             </div>
@@ -547,20 +351,11 @@
               jembes and pangas to wheelbarrows, construction tools, and farming
               supplies, we provide reliable products at affordable prices.
             </p>
-
             <ul class="list-unstyled custom-social">
-              <li>
-                <a href="#"><span class="fa fa-brands fa-facebook-f"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="fa fa-brands fa-twitter"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="fa fa-brands fa-instagram"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="fa fa-brands fa-linkedin"></span></a>
-              </li>
+              <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+              <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+              <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+              <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
             </ul>
           </div>
 
@@ -568,13 +363,12 @@
             <div class="row links-wrap">
               <div class="col-6 col-sm-6 col-md-3">
                 <ul class="list-unstyled">
-                  <li><a href="#">About us</a></li>
+                  <li><a href="about.html">About us</a></li>
                   <li><a href="#">Services</a></li>
                   <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact us</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
                 </ul>
               </div>
-
               <div class="col-6 col-sm-6 col-md-3">
                 <ul class="list-unstyled">
                   <li><a href="#">Support</a></li>
@@ -582,7 +376,6 @@
                   <li><a href="#">Live chat</a></li>
                 </ul>
               </div>
-
               <div class="col-6 col-sm-6 col-md-3">
                 <ul class="list-unstyled">
                   <li><a href="#">Jobs</a></li>
@@ -591,12 +384,11 @@
                   <li><a href="#">Privacy Policy</a></li>
                 </ul>
               </div>
-
               <div class="col-6 col-sm-6 col-md-3">
                 <ul class="list-unstyled">
-                  <li><a href="#">Sledge Hammer</a></li>
-                  <li><a href="#">Tape Measure</a></li>
-                  <li><a href="#">Mattock</a></li>
+                  <li><a href="shop.html">Sledge Hammer</a></li>
+                  <li><a href="shop.html">Tape Measure</a></li>
+                  <li><a href="shop.html">Mattock</a></li>
                 </ul>
               </div>
             </div>
@@ -608,13 +400,10 @@
             <div class="col-lg-6">
               <p class="mb-2 text-center text-lg-start">
                 Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
+                <script>document.write(new Date().getFullYear());</script>
                 . All Rights Reserved.
               </p>
             </div>
-
             <div class="col-lg-6 text-center text-lg-end">
               <ul class="list-unstyled d-inline-flex ms-auto">
                 <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
@@ -627,10 +416,168 @@
     </footer>
     <!-- End Footer Section -->
 
+    <!-- 8. RECEIPT MODAL -->
+    <div class="modal fade" id="receiptModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title"><i class="fas fa-check-circle me-2"></i>Order Successful!</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="receiptBody">
+            <!-- Receipt details will be injected here by JavaScript -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="window.print()"><i class="fas fa-print me-2"></i>Print Receipt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Existing Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
-    
-  <script src="js/customer.js"></script>
-</body>
+    <script src="js/customer.js"></script>
+
+    <!-- CHECKOUT LOGIC SCRIPT -->
+    <script>
+      // MOCK CART DATA (Simulating what comes from cart.html)
+      const cartItems = [
+        { id: 1, name: "Heavy Duty Wheelbarrow", price: 4500, qty: 1, stock: 5 },
+        { id: 2, name: "Professional Sledge Hammer", price: 1200, qty: 2, stock: 2 }
+      ];
+
+      // VALID COUPONS
+      const validCoupons = {
+        "BRICK10": 10, // 10% off
+        "EQUIP20": 20  // 20% off
+      };
+
+      let discountPercent = 0;
+
+      // 1, 2, 3, 4. RENDER PRODUCTS, PRICE, QUANTITY, AND CHECK STOCK
+      function renderOrderSummary() {
+        const tbody = document.getElementById('orderItemsBody');
+        tbody.innerHTML = '';
+        let subtotal = 0;
+        let stockWarning = false;
+
+        cartItems.forEach(item => {
+          const lineTotal = item.price * item.qty;
+          subtotal += lineTotal;
+
+          // Check Stock (Requirement 4)
+          if (item.qty > item.stock) {
+            stockWarning = true;
+          }
+
+          const row = `
+            <tr>
+              <td>
+                <strong>${item.name}</strong><br>
+                <small class="text-muted">Qty: ${item.qty} × KES ${item.price.toLocaleString()}</small><br>
+                <small class="text-muted">Stock Available: ${item.stock}</small>
+                ${item.qty > item.stock ? '<br><small class="text-danger fw-bold"><i class="fas fa-exclamation-triangle"></i> Exceeds available stock!</small>' : ''}
+              </td>
+              <td class="text-end">KES ${lineTotal.toLocaleString()}</td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        });
+
+        // Disable button if stock is exceeded
+        const placeOrderBtn = document.getElementById('placeOrderBtn');
+        if (stockWarning) {
+          placeOrderBtn.disabled = true;
+          placeOrderBtn.classList.add('btn-secondary');
+          placeOrderBtn.classList.remove('btn-black');
+          placeOrderBtn.innerText = "Fix Stock Issues to Proceed";
+        } else {
+          placeOrderBtn.disabled = false;
+          placeOrderBtn.classList.remove('btn-secondary');
+          placeOrderBtn.classList.add('btn-black');
+          placeOrderBtn.innerText = "Place Order";
+        }
+
+        updateTotals(subtotal);
+      }
+
+      // 6. UPDATE ORDER TOTALS
+      function updateTotals(subtotal) {
+        const discountAmount = subtotal * (discountPercent / 100);
+        const total = subtotal - discountAmount;
+
+        document.getElementById('subtotalAmount').innerText = `KES ${subtotal.toLocaleString()}`;
+        document.getElementById('discountAmount').innerText = `- KES ${discountAmount.toLocaleString()}`;
+        document.getElementById('totalAmount').innerText = `KES ${total.toLocaleString()}`;
+      }
+
+      // 5. COUPON LOGIC
+      document.getElementById('applyCouponBtn').addEventListener('click', () => {
+        const code = document.getElementById('c_code').value.trim().toUpperCase();
+        const messageEl = document.getElementById('couponMessage');
+
+        if (validCoupons[code]) {
+          discountPercent = validCoupons[code];
+          messageEl.innerText = `Coupon applied! ${discountPercent}% discount added.`;
+          messageEl.className = "mt-2 small fw-bold text-success";
+          renderOrderSummary(); // Recalculate totals
+        } else {
+          discountPercent = 0;
+          messageEl.innerText = "Invalid coupon code.";
+          messageEl.className = "mt-2 small fw-bold text-danger";
+          renderOrderSummary();
+        }
+      });
+
+      // 7 & 8. PLACE ORDER & GENERATE RECEIPT
+      document.getElementById('placeOrderBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Get selected payment method
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+        const totalText = document.getElementById('totalAmount').innerText;
+        const orderId = 'ORD-' + Math.floor(Math.random() * 100000);
+
+        // Build Receipt HTML
+        let receiptHTML = `
+          <div class="text-center mb-4">
+            <h4>BrickStare Equip</h4>
+            <p class="text-muted">Official Order Receipt</p>
+          </div>
+          <div class="row mb-3">
+            <div class="col-6"><strong>Order ID:</strong> ${orderId}</div>
+            <div class="col-6 text-end"><strong>Date:</strong> ${new Date().toLocaleDateString()}</div>
+            <div class="col-6"><strong>Payment:</strong> ${paymentMethod}</div>
+            <div class="col-6 text-end"><strong>Status:</strong> <span class="badge bg-success">Paid</span></div>
+          </div>
+          <table class="table table-sm table-bordered">
+            <thead><tr><th>Item</th><th class="text-end">Total</th></tr></thead>
+            <tbody>
+        `;
+
+        cartItems.forEach(item => {
+          receiptHTML += `<tr><td>${item.name} (x${item.qty})</td><td class="text-end">KES ${(item.price * item.qty).toLocaleString()}</td></tr>`;
+        });
+
+        receiptHTML += `
+            </tbody>
+          </table>
+          <div class="text-end">
+            <h5>Grand Total: ${totalText}</h5>
+          </div>
+        `;
+
+        // Inject and show modal
+        document.getElementById('receiptBody').innerHTML = receiptHTML;
+        const receiptModal = new bootstrap.Modal(document.getElementById('receiptModal'));
+        receiptModal.show();
+      });
+
+      // Initialize on page load
+      renderOrderSummary();
+    </script>
+  </body>
 </html>
